@@ -6,9 +6,9 @@ contract Bank{
     // everybody should have an account
     //anybody should be able to pay into the account
     //only the owner of the account should be able to withdaw from his account
-    address payable Owner;
+    address immutable Owner;
      constructor(){
-        Owner == msg.sender;
+        Owner = msg.sender;
     }
 
     
